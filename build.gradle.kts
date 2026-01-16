@@ -13,16 +13,6 @@ plugins {
 group = "org.fossify"
 version = "1.0.0"
 
-// --- ADD THIS BLOCK HERE ---
-repositories {
-    google()
-    mavenCentral()
-    maven { url = uri("https://jitpack.io") }
-    // Some older libraries still live here or are cached here
-    maven { url = uri("https://jcenter.bintray.com") } 
-}
-// ---------------------------
-
 android {
     namespace = "org.fossify.commons"
     compileSdk = 34
