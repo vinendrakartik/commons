@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    // VERSIONS ARE CRITICAL HERE FOR JITPACK
     id("com.android.library") version "8.2.2"
     id("org.jetbrains.kotlin.android") version "1.9.22"
     id("org.jetbrains.kotlin.plugin.parcelize") version "1.9.22"
@@ -13,6 +12,16 @@ plugins {
 
 group = "org.fossify"
 version = "1.0.0"
+
+// --- ADD THIS BLOCK HERE ---
+repositories {
+    google()
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+    // Some older libraries still live here or are cached here
+    maven { url = uri("https://jcenter.bintray.com") } 
+}
+// ---------------------------
 
 android {
     namespace = "org.fossify.commons"
@@ -66,7 +75,6 @@ android {
 }
 
 dependencies {
-    // Hardcoded dependencies for JitPack stability
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     api("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
     api("androidx.core:core-ktx:1.12.0")
