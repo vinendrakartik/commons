@@ -2,10 +2,12 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
+    // VERSIONS ARE CRITICAL HERE FOR JITPACK
+    id("com.android.library") version "8.2.2"
+    id("org.jetbrains.kotlin.android") version "1.9.22"
     id("kotlin-parcelize")
-    id("com.google.devtools.ksp")
+    id("com.google.devtools.ksp") version "1.9.22-1.0.17"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
     `maven-publish`
 }
 
