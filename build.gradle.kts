@@ -5,7 +5,7 @@ plugins {
     // VERSIONS ARE CRITICAL HERE FOR JITPACK
     id("com.android.library") version "8.2.2"
     id("org.jetbrains.kotlin.android") version "1.9.22"
-    id("kotlin-parcelize")
+    id("org.jetbrains.kotlin.plugin.parcelize") version "1.9.22"
     id("com.google.devtools.ksp") version "1.9.22-1.0.17"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
     `maven-publish`
