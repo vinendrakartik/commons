@@ -1,13 +1,14 @@
 pluginManagement {
     repositories {
-        google() 
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // CHANGED: "PREFER_SETTINGS" allows build.gradle to add its own repos if needed
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
