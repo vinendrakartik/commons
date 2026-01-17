@@ -13,11 +13,12 @@ plugins {
 group = "org.fossify"
 version = "1.0.0"
 
+// --- KEEP THIS BLOCK (It works with PREFER_PROJECT) ---
 repositories {
     google()
     mavenCentral()
     maven { url = uri("https://jitpack.io") }
-    maven { url = uri("https://jcenter.bintray.com") } 
+    maven { url = uri("https://jcenter.bintray.com") }
 }
 
 android {
@@ -95,9 +96,21 @@ dependencies {
     implementation("com.googlecode.ez-vcard:ez-vcard:0.11.3")
     api("joda-time:joda-time:2.12.7")
     api("me.zhanghai.android.fastscroll:library:1.3.0")
+    
+    // --- FIXED DEPENDENCIES ---
+    // These now use 'com.github' to pull directly from GitHub via JitPack
+    // replacing the dead JCenter artifacts.
+    
+    // Was: com.github.tibbi:reprint:4.0.0 (This is correct, kept as is)
     api("com.github.tibbi:reprint:4.0.0") 
-    api("com.duolingo.open:rtl-viewpager:2.0.0")
-    api("com.andrognito.patternlockview:patternlockview:1.0.0")
+    
+    // Was: com.duolingo.open:rtl-viewpager:2.0.0 (DEAD on JCenter)
+    api("com.github.duolingo:rtl-viewpager:2.0.0") 
+
+    // Was: com.andrognito.patternlockview:patternlockview:1.0.0 (DEAD on JCenter)
+    api("com.github.aritraroy:PatternLockView:1.0.0") 
+    // --------------------------
+
     api("com.google.code.gson:gson:2.10.1")
 
     api("com.github.bumptech.glide:glide:4.16.0")
