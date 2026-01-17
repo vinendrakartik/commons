@@ -13,14 +13,6 @@ plugins {
 group = "org.fossify"
 version = "1.0.0"
 
-// --- KEEP THIS BLOCK (It works with PREFER_PROJECT) ---
-repositories {
-    google()
-    mavenCentral()
-    maven { url = uri("https://jitpack.io") }
-    maven { url = uri("https://jcenter.bintray.com") }
-}
-
 android {
     namespace = "org.fossify.commons"
     compileSdk = 34
@@ -97,19 +89,16 @@ dependencies {
     api("joda-time:joda-time:2.12.7")
     api("me.zhanghai.android.fastscroll:library:1.3.0")
     
-    // --- FIXED DEPENDENCIES ---
-    // These now use 'com.github' to pull directly from GitHub via JitPack
-    // replacing the dead JCenter artifacts.
+    // --- FIXED DEPENDENCIES (DO NOT CHANGE) ---
+    // 1. Reprint: Use the specific commit hash or valid tag if 4.0.0 fails
+    api("com.github.tibbi:reprint:28bfde9") 
     
-    // Was: com.github.tibbi:reprint:4.0.0 (This is correct, kept as is)
-    api("com.github.tibbi:reprint:4.0.0") 
-    
-    // Was: com.duolingo.open:rtl-viewpager:2.0.0 (DEAD on JCenter)
-    api("com.github.duolingo:rtl-viewpager:2.0.0") 
+    // 2. RtlViewPager: Use the specific commit hash from GitHub
+    api("com.github.duolingo:rtl-viewpager:940f12724f") 
 
-    // Was: com.andrognito.patternlockview:patternlockview:1.0.0 (DEAD on JCenter)
-    api("com.github.aritraroy:PatternLockView:1.0.0") 
-    // --------------------------
+    // 3. PatternLockView: Use master-SNAPSHOT as there are no release tags
+    api("com.github.aritraroy:PatternLockView:master-SNAPSHOT") 
+    // ------------------------------------------
 
     api("com.google.code.gson:gson:2.10.1")
 
