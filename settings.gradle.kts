@@ -7,8 +7,8 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    // CHANGED: "PREFER_SETTINGS" allows build.gradle to add its own repos if needed
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    // CHANGED: "PREFER_PROJECT" allows build.gradle to add its own repos if needed
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
