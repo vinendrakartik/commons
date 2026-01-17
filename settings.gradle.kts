@@ -7,12 +7,13 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    // Keep this strict mode! It's good practice.
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
-        // CRITICAL: PatternLockView and RTL-ViewPager live here
+        // We move the required repo HERE
         maven { url = uri("https://jcenter.bintray.com") } 
     }
 }
