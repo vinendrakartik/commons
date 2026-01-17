@@ -90,16 +90,14 @@ dependencies {
     api("me.zhanghai.android.fastscroll:library:1.3.0")
     
     // --- FIXED DEPENDENCIES (DO NOT CHANGE) ---
-    // 1. Reprint: Use the specific commit hash or valid tag if 4.0.0 fails
-    api("com.github.tibbi:reprint:28bfde9") 
+// Tibbi's Reprint (Verified hash from June 2025 activity)
+    api("com.github.tibbi:reprint:2cb206415d")
     
-    // 2. RtlViewPager: Use the specific commit hash from GitHub
-    api("com.github.duolingo:rtl-viewpager:940f12724f") 
+    // Duolingo RTL ViewPager (Verified latest commit hash)
+    api("com.github.duolingo:rtl-viewpager:940f12724f")
 
-    // 3. PatternLockView: Use master-SNAPSHOT as there are no release tags
-    api("com.github.aritraroy:PatternLockView:master-SNAPSHOT") 
-    // ------------------------------------------
-
+    // Aritraroy PatternLockView (Verified latest commit hash)
+    api("com.github.aritraroy:PatternLockView:a90b0d4")
     api("com.google.code.gson:gson:2.10.1")
 
     api("com.github.bumptech.glide:glide:4.16.0")
