@@ -40,20 +40,21 @@ class FeatureLockedDialog(val activity: Activity, val callback: () -> Unit) {
         view.featureLockedImage.applyColorFilter(activity.getProperTextColor())
 
         activity.getAlertDialogBuilder()
-            .setPositiveButton(R.string.purchase, null)
+            .setPositiveButton(R.string.ok, null)
             .setNegativeButton(R.string.later) { _, _ -> dismissDialog() }
             .setOnDismissListener { dismissDialog() }
             .apply {
                 activity.setupDialogStuff(view.root, this, cancelOnTouchOutside = false) { alertDialog ->
                     dialog = alertDialog
-                    view.featureLockedDescription.text = Html.fromHtml(activity.getString(R.string.features_locked))
+                    view.featureLockedDescription.text = Html.fromHtml(activity.getString(R.string.purchase_thank_you))
                     view.featureLockedDescription.movementMethod = LinkMovementMethod.getInstance()
 
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        activity.launchPurchaseThankYouIntent()
+                        dismissDialog()
                     }
                 }
             }
+        callback()
     }
 
     fun dismissDialog() {

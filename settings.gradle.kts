@@ -1,20 +1,18 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
-        gradlePluginPortal()
     }
 }
-
 dependencyResolutionManagement {
-    // CHANGED: "PREFER_PROJECT" allows build.gradle to add its own repos if needed
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-        maven { url = uri("https://jcenter.bintray.com") }
+        maven { setUrl("https://jitpack.io") }
     }
 }
-
-rootProject.name = "Commons"
+rootProject.name = "Fossify-Commons"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+include(":commons", ":app")

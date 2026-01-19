@@ -33,7 +33,6 @@ import org.fossify.commons.extensions.getStoreUrl
 import org.fossify.commons.extensions.isThankYouInstalled
 import org.fossify.commons.extensions.launchAppRatingPage
 import org.fossify.commons.extensions.launchMoreAppsFromUsIntent
-import org.fossify.commons.extensions.launchPurchaseThankYouIntent
 import org.fossify.commons.extensions.launchViewIntent
 import org.fossify.commons.extensions.showErrorToast
 import org.fossify.commons.extensions.toast
@@ -264,7 +263,7 @@ class AboutActivity : BaseComposeActivity() {
         if (resources.getBoolean(R.bool.hide_google_relations)) {
             startActivity(Intent(applicationContext, DonationActivity::class.java))
         } else {
-            launchPurchaseThankYouIntent()
+            // launchPurchaseThankYouIntent() - this is removed
         }
     }
 
