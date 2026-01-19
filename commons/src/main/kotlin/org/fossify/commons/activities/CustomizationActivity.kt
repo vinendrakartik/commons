@@ -597,11 +597,6 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun fontPickerClicked() {
-        if (!resources.getBoolean(R.bool.hide_google_relations) && !isOrWasThankYouInstalled()) {
-            PurchaseThankYouDialog(this)
-            return
-        }
-
         val items = arrayListOf(
             RadioItem(FONT_TYPE_SYSTEM_DEFAULT, getString(R.string.system_default)),
             RadioItem(FONT_TYPE_MONOSPACE, getString(R.string.font_monospace)),
@@ -841,7 +836,6 @@ class CustomizationActivity : BaseSimpleActivity() {
 
             else -> {
                 binding.applyToAllSwitch.isChecked = false
-                PurchaseThankYouDialog(this)
             }
         }
     }

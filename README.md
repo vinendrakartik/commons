@@ -10,7 +10,7 @@ To publish this library to your local Maven repository (`~/.m2/repository`), use
 
 ```bash
 # Publish with a custom version
-./gradlew -PVERSION=1.2.3 publishToMavenLocal
+./gradlew -PVERSION=1.0.0-local publishToMavenLocal
 
 # Publish with git commit hash as version
 ./gradlew -PVERSION=$(git rev-parse --short HEAD) publishToMavenLocal
@@ -25,10 +25,11 @@ The version can also be set via `VERSION` environment variable.
    ```kotlin
    dependencyResolutionManagement {
        repositories {
+           mavenLocal() // already exists in Fossify app repos
            mavenCentral()
            google()
            maven { setUrl("https://jitpack.io") }
-           mavenLocal() // already exists in Fossify app repos
+           
        }
    }
    ```
@@ -37,7 +38,7 @@ The version can also be set via `VERSION` environment variable.
 
    ```toml
    [versions]
-   commons = "1.2.3"  # Use the version you published
+   commons = "1.0.0-local"  # Use the version you published
    ```
 
 3. **Sync and build.**
