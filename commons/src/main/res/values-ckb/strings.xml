@@ -15,4 +15,10 @@
     <string name="open_with">کردنەوە وەک</string>
     <string name="edit_with">دەستکاریکردن لەڕێی</string>
     <string name="edit">دەستکاری</string>
+    <string name="audio">دەنگ</string>
+    <string name="excluded">(بەدەر)</string>
+    <plurals name="files_saved">
+        <item quantity="one">پەڕگەکە بە سەرکەوتوویی پاشەکەوت کرا</item>
+        <item quantity="other">پەڕگەکان بە سەرکەوتوویی پاشەکەوت کران</item>
+    </plurals>
 </resources>

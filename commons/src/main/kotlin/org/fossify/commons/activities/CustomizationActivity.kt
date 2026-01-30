@@ -606,6 +606,13 @@ class CustomizationActivity : BaseSimpleActivity() {
         RadioGroupDialog(this, items, curFontType) { selected ->
             val selectedType = selected as Int
             if (selectedType == FONT_TYPE_CUSTOM) {
+                if (
+                    !resources.getBoolean(R.bool.hide_google_relations)
+                    && !isOrWasThankYouInstalled(allowPretend = false)
+                ) {
+                    PurchaseThankYouDialog(this)
+                    return@RadioGroupDialog
+                }
                 openFontFilePicker()
             } else {
                 curFontType = selectedType

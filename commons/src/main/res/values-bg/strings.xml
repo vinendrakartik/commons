@@ -660,7 +660,7 @@
     <string name="files_restored_successfully">Файловете са възстановени</string>
     <string name="empty_recycle_bin_confirmation">Желаете ли кошчето да бъде изпразнено? Файловете ще бъдат безвъзвратно изгубени.</string>
     <string name="recycle_bin_empty">Кошчето е празно</string>
-    <string name="moving_recycle_bin_items_disabled">Възможността за преместване на елементи от кошчето е изключена, използвайте възстановяване</string>
+    <string name="moving_recycle_bin_items_disabled">Възможността за преместване на елементи от кошчето е изключена, използвайте възстановяване.</string>
     <string name="show_the_recycle_bin">Показване на кошчето</string>
     <string name="hide_the_recycle_bin">Скриване на кошчето</string>
     <string name="open_the_recycle_bin">Отваряне на кошчето</string>
@@ -813,7 +813,7 @@
     <string name="faq_4_title_commons">Не харесвам цветовете на приспособленията, мога ли да ги променя\?</string>
     <string name="faq_4_text_commons">Да, докато плъзнете приспособлението на началния си екран, се появява екран за конфигурация на приспособлението. Ще видите цветни квадратчета в долния ляв ъгъл, просто ги натиснете, за да изберете нов цвят. Можете да използвате плъзгача и за регулиране на алфа-та.</string>
     <string name="faq_5_title_commons">Мога ли по някакъв начин да възстановя изтритите файлове\?</string>
-    <string name="faq_5_text_commons">Ако те наистина са изтрити, не можете. Въпреки това, по подразбиране има активирано кошче, то ще доведе до това, че файловете просто се преместват в кошчето, вместо да бъдат изтрити.</string>
+    <string name="faq_5_text_commons">Ако наистина бяа премахнати, нямаше да можете да ги възстановите. Въпреки това, по подразбиране кошчето е включено, така че файловете да бъдат премествани в кошчето, вместо премахвани.</string>
     <string name="faq_6_title_commons">Иконата за стартиране на приложението изчезна. Какво мога да направя\?</string>
     <string name="faq_7_title_commons">Парите са приспаднати от банковата ми сметка, но не мога да изтегля приложението. Какво мога да направя\?</string>
     <string name="faq_7_text_commons">Плащанията се обработват изцяло от Google, системната им има гличове от време на време. Просто изчистете кеша на приложението Google Play и рестартирайте устройството си, след което отново го изтегляте.</string>
@@ -1007,7 +1007,7 @@
     <string name="app_icon_color_warning">Внимание: Някои начални екрани може да не изобразят правилно потребителските настройки на пиктограмите на приложенията. Ако пиктограмата изчезне, стартирате приложението от Google Play или, ако има, от приспособление. След това възстановете подразбирания зелен цвят на пиктограмата – #106D1F. В краен случаи може да се наложи преинсталиране на приложението.</string>
     <string name="apply_to_all_apps">Прилагане на темата към всички приложения на Fossify</string>
     <string name="shared_theme_note">Обърнете внимание, че въпреки че използвате Про, все още се нуждаете от Fossify Thank You по технически причини. То се грижи за синхронизирането на цветовете.</string>
-    <string name="purchase_thank_you"><![CDATA[Поръчайте <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>, за да отключите тази възможност и да подкрепите разработката. Благодарим ви!]]></string>
+    <string name="purchase_thank_you"><![CDATA[Поръчайте <a href=https://play.google.com/store/apps/details?id=org.fossify.thankyou>Fossify Thank You</a>, за да използвате тази възможност и да подкрепите разработката. Благодарим ви!]]></string>
     <string name="purchase_simple_thank_you">Поръчайте Fossify Thank You</string>
     <plurals name="trial_expires_days">
         <item quantity="one">Пробният период изтича след %d ден.</item>
@@ -1041,4 +1041,8 @@
     <string name="font_monospace">Равноширок</string>
     <string name="select_font_file">Избиране файл на шрифт…</string>
     <string name="invalid_font_file">Неприемлив файл на шрифт</string>
+    <string name="edit_contact">Променяне на контакт</string>
+    <string name="on_contact_click">При докосване на контакти</string>
+    <string name="call_contact">Обаждане на контакта</string>
+    <string name="view_contact">Преглед на контакта</string>
 </resources>
